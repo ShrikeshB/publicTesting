@@ -13,6 +13,10 @@ app.use(
   })
 );
 
+app.use("/", (req, res) => {
+  return "hello";
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
