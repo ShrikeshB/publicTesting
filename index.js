@@ -7,11 +7,12 @@ const app = express();
 
 // Middleware
 app.use(
-  cors({
-    origin: "http://localhost:5173", // Your React frontend URL
-    credentials: true, // Allow cookies to be sent
-  })
-);
+    cors({
+      origin: "*", // Allow all origins
+      credentials: true, // Optional: may cause issues with '*'
+    })
+  );
+  
 
 app.use("/", (req, res) => {
   return "hello";
